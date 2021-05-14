@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: 'Pangolin', cursive;
+    background-color: #facb54;
 }
   
 *, *::before, *::after {
@@ -22,11 +23,18 @@ h1 {
     font-size: 64px;
 }
 
+h1:hover, h2:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
 #board-container {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 360px;
-    margin: 35px auto 50px auto;
+    margin: 35px auto 30px auto;
 }
 
 .board-square {
@@ -40,6 +48,10 @@ h1 {
     line-height: 120px;
 }
 
+.board-square:hover {
+    background-color: #ffc32b;
+ }
+
 .top, .mid {
     border-bottom: 3px solid #004466;
 }
@@ -48,10 +60,50 @@ h1 {
     border-right: 3px solid #004466;
 }
 
-#restart-game {
-    margin-top: 20px;
-    padding: 5px 15px;
-    font-family: 'Pangolin', cursive;
-    background-color: #004466;
-    color: white;
+h2 {
+    color: #004466;
+    font-size: 32px;
 }
+
+#restart-game {
+    display:inline-block;
+    background-color: #004466;
+    width: 360px;
+    padding: 15px 35px;
+    margin-top: 20px;
+    border: 4px solid #004466;
+    border-radius: 25px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Pangolin',sans-serif;
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    transition: all 0.2s;
+}
+
+#restart-game:focus {
+    outline: none;
+}
+
+#restart-game:hover {
+    border-color: white;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
