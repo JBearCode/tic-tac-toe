@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tic Tac Toe ❌⭕</title>
+  <title>Tic Tac Toe</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
@@ -16,17 +16,17 @@
 <main>
 
   <div id="board-container">
-      <div class="board-square" data-key="0"></div>
-      <div class="board-square" data-key="1"></div>
-      <div class="board-square" data-key="2"></div>
-      <div class="board-square" data-key="3"></div>
-      <div class="board-square" data-key="4"></div>
-      <div class="board-square" data-key="5"></div>
-      <div class="board-square" data-key="6"></div>
-      <div class="board-square" data-key="7"></div>
-      <div class="board-square" data-key="8"></div>
+      <div class="board-square top left" data-key="0">X</div>
+      <div class="board-square top center" data-key="1">O</div>
+      <div class="board-square top right" data-key="2"></div>
+      <div class="board-square mid left" data-key="3"></div>
+      <div class="board-square mid center" data-key="4"></div>
+      <div class="board-square mid right" data-key="5"></div>
+      <div class="board-square bottom left" data-key="6"></div>
+      <div class="board-square bottom center" data-key="7"></div>
+      <div class="board-square bottom right" data-key="8"></div>
   </div>
-  <h2 class="game-status"></h2>
+  <h2 id="game-status"></h2>
   <button type="button" class="restart-game">Restart Game</button>
 
 </main>

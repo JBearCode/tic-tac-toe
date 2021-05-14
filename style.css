@@ -21,8 +21,16 @@ html {
     align-items: center;
     justify-content: center;
     font-family: 'Merienda One', cursive;
-    font-size: 50px;
+    font-size: 80px;
     width: 120px;
     height: 120px;
-    line-height: 100px;
+    line-height: 120px;
+}
+
+.top, .mid {
+    border-bottom: 3px solid black;
+}
+
+.left, .center {
+    border-right: 3px solid black;
 }
