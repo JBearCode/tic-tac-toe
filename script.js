@@ -24,8 +24,9 @@ function handleClick(e) {
   checkGameStatus();
 }
 
-function handlePlay(clickEvent, squareIndex) {
-
+function handlePlay(clickedElement, squareIndex) {
+  gameBoard[squareIndex] = currentPlayer;
+  clickedElement.innerText = currentPlayer;
 }
 
 function changePlayer() {
@@ -37,7 +38,7 @@ function restartGame() {
 }
 
 function checkGameStatus() {
-    
+
 }
 
 document.querySelectorAll('.board-square').forEach(square => square.addEventListener('click', handleClick));
