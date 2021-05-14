@@ -11,11 +11,15 @@ html {
 
 #main-heading {
     margin-top: 25px;
-    color: #023047;
+    color: #004466;
 }
 
 header, main {
     text-align: center;
+}
+
+h1 {
+    font-size: 64px;
 }
 
 #board-container {
@@ -30,24 +34,24 @@ header, main {
     align-items: center;
     justify-content: center;
     font-family: 'Pangolin', cursive;
-    font-size: 80px;
+    font-size: 100px;
     width: 120px;
     height: 120px;
     line-height: 120px;
 }
 
 .top, .mid {
-    border-bottom: 3px solid #023047;
+    border-bottom: 3px solid #004466;
 }
 
 .left, .center {
-    border-right: 3px solid #023047;
+    border-right: 3px solid #004466;
 }
 
 #restart-game {
     margin-top: 20px;
     padding: 5px 15px;
     font-family: 'Pangolin', cursive;
-    background-color: #023047;
+    background-color: #004466;
     color: white;
 }

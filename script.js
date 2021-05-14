@@ -27,6 +27,11 @@ function handleClick(e) {
 function handlePlay(clickedElement, squareIndex) {
   gameBoard[squareIndex] = currentPlayer;
   clickedElement.innerText = currentPlayer;
+  if (currentPlayer === "X") {
+    clickedElement.style.color = '#219EBC';
+  } else {
+    clickedElement.style.color = '#FB8500';
+  }
 }
 
 const winningCombos = [
@@ -57,12 +62,14 @@ function handleResult() {
   }
   if (gameWon) {
       gameStatusMessage.innerText = winningMessage();
+      changeMessageColor('004466')
       gameActive = false;
       return
   }
   let tieGame = !gameBoard.includes("");
   if (tieGame) {
       gameStatusMessage.innerText = tieMessage;
+      changeMessageColor('004466')
       gameActive = false;
       return;
   }
@@ -70,9 +77,18 @@ function handleResult() {
 }
 
 function changePlayer() {
-  currentPlayer = currentPlayer=== "X" ? "O" : "X";
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
   gameStatusMessage.innerText = currentPlayerTurn();
+  if (currentPlayer === "X") {
+      changeMessageColor('219EBC')
+  } else {
+      changeMessageColor('FB8500')
+  }
   console.log('changePlayer() ran');
+}
+
+function changeMessageColor(color) {
+  gameStatusMessage.style.color = "#" + color;
 }
 
 function restartGame() {
