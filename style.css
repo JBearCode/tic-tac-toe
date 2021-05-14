@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+    font-family: default;
+}
+  
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+#board-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 360px;
+    margin: 30px;
+}
+
+.board-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Merienda One', cursive;
+    font-size: 50px;
+    width: 120px;
+    height: 120px;
+    line-height: 100px;
+}
