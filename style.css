@@ -48,10 +48,6 @@ h1:hover, h2:hover {
     line-height: 120px;
 }
 
-.board-square:hover {
-    background-color: #ffc32b;
- }
-
 .top, .mid {
     border-bottom: 3px solid #004466;
 }
