@@ -7,7 +7,7 @@ let currentPlayer = "X";
 let gameBoard = ["","","","","","","","",""];
 
 const winningMessage = () => `${currentPlayer} wins!`
-const tieMessage = "It's a tie!";
+const tieMessage = "It's a tie";
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
 
 gameStatusMessage.innerText = currentPlayerTurn();
@@ -76,7 +76,11 @@ function changePlayer() {
 }
 
 function restartGame() {
-
+  gameBoard = ["","","","","","","","",""];
+  document.querySelectorAll('.board-square').forEach(square => square.innerText = "");
+  gameActive = true;
+  currentPlayer = "X";
+  gameStatusMessage.innerText = currentPlayerTurn();
 }
 
 document.querySelectorAll('.board-square').forEach(square => square.addEventListener('click', handleClick));

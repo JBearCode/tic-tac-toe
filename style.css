@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    font-family: default;
+    font-family: 'Pangolin', cursive;
 }
   
 *, *::before, *::after {
@@ -9,18 +9,27 @@ html {
     box-sizing: inherit;
 }
 
+#main-heading {
+    margin-top: 25px;
+    color: #023047;
+}
+
+header, main {
+    text-align: center;
+}
+
 #board-container {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 360px;
-    margin: 30px;
+    margin: 35px auto 50px auto;
 }
 
 .board-square {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Merienda One', cursive;
+    font-family: 'Pangolin', cursive;
     font-size: 80px;
     width: 120px;
     height: 120px;
@@ -28,9 +37,17 @@ html {
 }
 
 .top, .mid {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #023047;
 }
 
 .left, .center {
-    border-right: 3px solid black;
+    border-right: 3px solid #023047;
+}
+
+#restart-game {
+    margin-top: 20px;
+    padding: 5px 15px;
+    font-family: 'Pangolin', cursive;
+    background-color: #023047;
+    color: white;
 }
